@@ -13,7 +13,8 @@
     "@capacitor/core": "^3.5.1",
     "@capacitor/ios": "^3.5.1",
     "capacitor-plugin-safe-area": "^0.0.3",
-    "excalibur": "^0.26.0"
+    "excalibur": "^0.26.0",
+    "safe-area-insets": "^1.4.1"
   },
   "devDependencies": {
     "@capacitor/cli": "^3.5.1",

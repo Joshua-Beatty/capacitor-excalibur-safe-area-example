@@ -76,20 +76,19 @@ game.input.pointers.primary.on('down', function (evt) {
     }))
 
 })
-
+const safeAreaInsets = require('safe-area-insets')
 game.start().then(()=>{
     
 console.log("sat: " + getComputedStyle(document.documentElement).getPropertyValue("--sat"))
 console.log("sab: " + getComputedStyle(document.documentElement).getPropertyValue("--sab"))
 console.log("sal: " + getComputedStyle(document.documentElement).getPropertyValue("--sal"))
 console.log("sar: " + getComputedStyle(document.documentElement).getPropertyValue("--sar"))
+console.log('safeAreaInsets.support', safeAreaInsets.support)
+console.log("left: " + safeAreaInsets.left)
+console.log("right: " + safeAreaInsets.right)
+console.log("top: " + safeAreaInsets.top)
+console.log("bottom: " + safeAreaInsets.bottom)
 console.log("win: " + window.innerWidth)
 }
     
 )
-
-import { SafeArea } from "capacitor-plugin-safe-area";
-
-SafeArea.getSafeAreaInsets().then(({ insets }) => {
-  console.log("insets: " + JSON.stringify(insets));
-})
