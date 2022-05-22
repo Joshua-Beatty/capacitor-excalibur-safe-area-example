@@ -55,10 +55,15 @@ const leftBar = new Actor({
     
 })
 game.add(leftBar)
+
+
+
+
 leftBar.on('preupdate', (evtObj) => {
-    //console.log(game.currentScene.camera)
-    leftBar.pos.x =  - game.currentScene.camera.viewport.width / 2 + leftBar.width / 2
+    const thing = Number(getComputedStyle(document.documentElement).getPropertyValue("--sal").replace("px", "")) / window.innerWidth * game.screen.resolution.width
+    leftBar.pos.x =  - game.currentScene.camera.viewport.width / 2 + leftBar.width / 2 + thing
   })
+
 game.input.pointers.primary.on('down', function (evt) {
     game.add(new Actor({
         x: evt.coordinates.worldPos.x,
@@ -72,5 +77,11 @@ game.input.pointers.primary.on('down', function (evt) {
 
 })
 
-game.start()
+game.start().then(()=>{
+    
+console.log("sal: " + getComputedStyle(document.documentElement).getPropertyValue("--sal"))
+console.log("win: " + window.innerWidth)
+}
+    
+)
 
