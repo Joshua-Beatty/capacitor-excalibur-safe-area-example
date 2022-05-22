@@ -62,6 +62,12 @@ game.add(leftBar)
 leftBar.on('preupdate', (evtObj) => {
     const thing = Number(getComputedStyle(document.documentElement).getPropertyValue("--sal").replace("px", "")) / window.innerWidth * game.screen.resolution.width
     leftBar.pos.x =  - game.currentScene.camera.viewport.width / 2 + leftBar.width / 2 + thing
+    console.log('safeAreaInsets.support', safeAreaInsets.support)
+    console.log("left: " + safeAreaInsets.left)
+    console.log("right: " + safeAreaInsets.right)
+    console.log("top: " + safeAreaInsets.top)
+    console.log("bottom: " + safeAreaInsets.bottom)
+    console.log("win: " + window.innerWidth)
   })
 
 game.input.pointers.primary.on('down', function (evt) {
