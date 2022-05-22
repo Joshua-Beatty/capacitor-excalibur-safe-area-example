@@ -44,7 +44,21 @@ game.add(new Actor({
     // color constants
     color: Color.Chartreuse,
 }))
-
+const leftBar = new Actor({
+    x: 0,
+    y: 0,
+    width: 50,
+    height: 380,
+    // Let's give it some color with one of the predefined
+    // color constants
+    color: Color.DarkGray,
+    
+})
+game.add(leftBar)
+leftBar.on('preupdate', (evtObj) => {
+    //console.log(game.currentScene.camera)
+    leftBar.pos.x =  - game.currentScene.camera.viewport.width / 2 + leftBar.width / 2
+  })
 game.input.pointers.primary.on('down', function (evt) {
     game.add(new Actor({
         x: evt.coordinates.worldPos.x,
