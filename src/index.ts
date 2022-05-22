@@ -79,7 +79,10 @@ game.input.pointers.primary.on('down', function (evt) {
 
 game.start().then(()=>{
     
+console.log("sat: " + getComputedStyle(document.documentElement).getPropertyValue("--sat"))
+console.log("sab: " + getComputedStyle(document.documentElement).getPropertyValue("--sab"))
 console.log("sal: " + getComputedStyle(document.documentElement).getPropertyValue("--sal"))
+console.log("sar: " + getComputedStyle(document.documentElement).getPropertyValue("--sar"))
 console.log("win: " + window.innerWidth)
 }
     
