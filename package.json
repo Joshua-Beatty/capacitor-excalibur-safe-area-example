@@ -12,6 +12,7 @@
   "dependencies": {
     "@capacitor/core": "^3.5.1",
     "@capacitor/ios": "^3.5.1",
+    "capacitor-plugin-safe-area": "^0.0.3",
     "excalibur": "^0.26.0"
   },
   "devDependencies": {

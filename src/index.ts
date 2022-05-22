@@ -88,3 +88,8 @@ console.log("win: " + window.innerWidth)
     
 )
 
+import { SafeArea } from "capacitor-plugin-safe-area";
+
+SafeArea.getSafeAreaInsets().then(({ insets }) => {
+  console.log("insets: " + JSON.stringify(insets));
+})
