@@ -59,3 +59,4 @@ game.input.pointers.primary.on('down', function (evt) {
 })
 
 game.start()
+
