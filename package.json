@@ -1,0 +1,25 @@
+{
+  "name": "excalibur26",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx webpack",
+    "start": "npx webpack && npx http-server"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@capacitor/core": "^3.5.1",
+    "@capacitor/ios": "^3.5.1",
+    "excalibur": "^0.26.0"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^3.5.1",
+    "http-server": "^14.1.0",
+    "ts-loader": "^9.3.0",
+    "typescript": "^4.6.4",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2"
+  }
+}
