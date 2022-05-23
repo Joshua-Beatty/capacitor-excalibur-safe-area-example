@@ -5,5 +5,15 @@
   </head>
   <body style="-webkit-touch-callout: none; -webkit-user-select: none;" oncontextmenu="return false;">
     <script src="./bundle.js" ></script>
+    <script>
+      window.plugins.safearea.get(
+  (result) => {
+    console.log(result)
+  },
+  (error) => {
+    // maybe set some sensible fallbacks?
+  }
+);
+    </script>
   </body>
 </html>

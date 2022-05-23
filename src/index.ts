@@ -44,30 +44,7 @@ game.add(new Actor({
     // color constants
     color: Color.Chartreuse,
 }))
-const leftBar = new Actor({
-    x: 0,
-    y: 0,
-    width: 50,
-    height: 380,
-    // Let's give it some color with one of the predefined
-    // color constants
-    color: Color.DarkGray,
-    
-})
-game.add(leftBar)
 
-
-
-
-leftBar.on('preupdate', (evtObj) => {
-    const thing = Number(getComputedStyle(document.documentElement).getPropertyValue("--sal").replace("px", "")) / window.innerWidth * game.screen.resolution.width
-    leftBar.pos.x =  - game.currentScene.camera.viewport.width / 2 + leftBar.width / 2 + thing
-    
-    console.log("sat: " + getComputedStyle(document.documentElement).getPropertyValue("--sat"))
-    console.log("sab: " + getComputedStyle(document.documentElement).getPropertyValue("--sab"))
-    console.log("sal: " + getComputedStyle(document.documentElement).getPropertyValue("--sal"))
-    console.log("sar: " + getComputedStyle(document.documentElement).getPropertyValue("--sar"))
-  })
 
 game.input.pointers.primary.on('down', function (evt) {
     game.add(new Actor({
@@ -81,9 +58,7 @@ game.input.pointers.primary.on('down', function (evt) {
     }))
 
 })
-const safeAreaInsets = require('safe-area-insets')
+
 game.start().then(()=>{
     
-}
-    
-)
+})
