@@ -1,6 +1,0 @@
-* {
-    --sat: constant(safe-area-inset-top);
-    --sab: constant(safe-area-inset-bottom);
-    --sal: constant(safe-area-inset-left);
-    --sar: constant(safe-area-inset-right);
-}

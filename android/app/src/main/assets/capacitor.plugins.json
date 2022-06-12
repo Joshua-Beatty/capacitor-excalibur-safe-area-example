@@ -1,0 +1,10 @@
+[
+	{
+		"pkg": "@capacitor/status-bar",
+		"classpath": "com.capacitorjs.plugins.statusbar.StatusBarPlugin"
+	},
+	{
+		"pkg": "get-safe-area-capacitor",
+		"classpath": "me.joshbeatty.capacitorsafearea.GetSafeAreaPlugin"
+	}
+]

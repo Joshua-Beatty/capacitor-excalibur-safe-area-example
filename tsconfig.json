@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+      "outDir": "./www/",
       "noImplicitAny": true,
       "module": "es6",
       "target": "es5",

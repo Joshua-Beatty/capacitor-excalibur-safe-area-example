@@ -16,7 +16,7 @@ module.exports = {
   },
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'www'),
+    path: path.resolve(__dirname, 'dist'),
   },
   optimization: {
     usedExports: true,
