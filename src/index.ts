@@ -26,8 +26,6 @@ function main(insets: { top: number, bottom: number, right: number, left: number
         y: 0,
         width: 20,
         height: 400,
-        // Let's give it some color with one of the predefined
-        // color constants
         color: Color.Chartreuse,
     }))
     game.add(new Actor({
@@ -35,8 +33,6 @@ function main(insets: { top: number, bottom: number, right: number, left: number
         y: 0,
         width: 20,
         height: 400,
-        // Let's give it some color with one of the predefined
-        // color constants
         color: Color.Chartreuse,
     }))
     game.add(new Actor({
@@ -44,8 +40,6 @@ function main(insets: { top: number, bottom: number, right: number, left: number
         y: -190,
         width: 600 - 20,
         height: 20,
-        // Let's give it some color with one of the predefined
-        // color constants
         color: Color.Chartreuse,
     }))
     game.add(new Actor({
@@ -53,8 +47,6 @@ function main(insets: { top: number, bottom: number, right: number, left: number
         y: 190,
         width: 600 - 20,
         height: 20,
-        // Let's give it some color with one of the predefined
-        // color constants
         color: Color.Chartreuse,
     }))
 
@@ -63,15 +55,12 @@ function main(insets: { top: number, bottom: number, right: number, left: number
         y: 0,
         width: 30,
         height: 300,
-        // Let's give it some color with one of the predefined
-        // color constants
         color: Color.Gray,
     })
 
-    game.on('preupdate', (evtObj: PreUpdateEvent) => {
+    window.addEventListener('resize', (_evtObj: any ) => {
         const thing = insets.left / window.innerWidth * game.screen.resolution.width
         leftBar.pos.x = - game.currentScene.camera.viewport.width / 2 + leftBar.width / 2 + thing
-        console.log("posX", leftBar.pos.x)
     })
     game.add(leftBar)
 

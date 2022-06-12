@@ -23,7 +23,7 @@ android-template/app/app.iml
 .settings/
 .project
 .env
-
+.cache/
 # Carthage and Carthage-built binaries
 Carthage
 *.xcframework.zip
